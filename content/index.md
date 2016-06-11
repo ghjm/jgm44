@@ -38,7 +38,7 @@ since it's a 28-byte string - which would be 22% of the entire RAM of the system
 I remember the looping and branching, but I don't remember how I got the random numbers. Maybe I counted in a loop
 while waiting for the first user input, or something. More likely it just wasn't actually random and the answer was
 always 57. It also seems likely that the game was really "guess a number from 00 to FF" because I don't think
-it would have been feasible to do translation to, or particularly from, decimal.
+it would have been feasible to do translation to, or particularly from, decimal. At least, not at my skill level at the time.
 
 ![8K RAM Board](/jgm44-8k-ram.png)
 
@@ -49,3 +49,4 @@ that my father had second thoughts about "getting a BASIC interpreter too soon" 
 doing real work in machine language, and that I wasn't learning anything with this BASIC nonsense.
 
 ![The BASIC Nonsense](/basic-computer-games.png)
+
