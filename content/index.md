@@ -3,7 +3,6 @@ date = "2016-06-07T16:21:03-04:00"
 draft = false
 url = "index.html"
 title = "The JGM-44 Microcomputer"
-
 +++
 
 **JGM-44 in its Ultimate Configuration**
@@ -49,3 +48,4 @@ I quickly abandoned hand-assembling 6802 opcodes by poring through databooks, an
 that my father had second thoughts about "getting a BASIC interpreter too soon" - he thought I should have spent more time
 doing real work in machine language, and that I wasn't learning anything with this BASIC nonsense.
 
+![The BASIC Nonsense](/basic-computer-games.png)
