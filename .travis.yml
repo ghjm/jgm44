@@ -1,0 +1,17 @@
+branches:
+  only:
+    - master
+language: go
+install: go get -v github.com/spf13/hugo
+script:
+  - hugo
+  - python --version
+  - sudo pip install s3cmd
+  - s3cmd sync --delete-removed -P -M -r public/ s3://jgm44.com/
+notifications:
+  email:
+    on_failure: always
+env:
+  matrix:
+  - secure: WENubm7lW5wObQSBOMtoDbOXUwI23NXu7+BgM2InrUKMskxybGf2EA2fXW0rSLFBYer+16gU1AVdxBosrXPYBfaXavjUI9kkDDNdyKLGI9gpOZW4cdFsdvTAlOAOPbVP9mrOTngwHsi6iOy54+NilRtAn+hWG+ATkpGmouKmjOz6Bh5k4UwskJoDh8FBHBOkAySQC9tDmjCp3PaP2/75x4eeOIUlIRKRTOWxWxfNvSBFYtfD7Rqay1+tIRYVtRRoJC8I1qu+NEAzH8up1tsPp5Bw/FVHtwnPgz3/Z00FMje18l5qaimsGFDksx9873ugJGTEv5jpY2ul4kkgg0fEnNCAgrY1vj1iXG0qgz+qnTBn1Kf8YhI/qrKZ8VkHLzJbxn8GmnZ/+elIUadvX1WFjsXlGSPosThN6WeTMdRlx22gDrppa8cY5aSmNopLjFMuApXJkk3UWeUQo6DmKmXwa4QC1bOY2CQkcXn2++2nSctVeEiUHU0RZNFaCSDJ1EfDW8usx4s/9RdkfJ5H4jj5yIne6Mb2hKTWvD6l95gPNTaYtdghfR4LjUgfbb6+KNtXvZL+unlFvnYus51vw18Spx8kbL6a2j/RRBevi0M7jGDYx7gmBShVh/UFupscAwVIOAFOHhTco6SQ2ylIiK70LPJEmAhQdOImpdAbiENGejw=
+  - secure: jl6nUmpKHqCA71QsycbF3o6KLOm9MTIvAqLw7OSsyLDmKnT5ncOK85zlzXFJcrdzCLL+4kvbRFMB4Bni3Y8tQak/p3PcJmhQFLewHkBLilIaIw8VK1bnwfbCiFjTzl/dtqUq4vb/IgXJ1xwv5SCtlVpFsyOy6uolA53gSNe8LLuO1V68ukhn353JuAL6WvRAt8ThZm3V4Mi7FFE/7xzNkKLBmibDe8fS/Z5Z3uujl9ETVRfGhcbOnJPhz6N1qu4S107gJYf2j2MTeWhNxm13ZnbMtFWa2W3oG6glgvOCEeTLK8nzz5VFvSALaIs7gIg7XAoi6c3ctC+B6SBFM6oaKb3MBYHF+9fWLXd/3Ct+tYeS6Yz6cdrLIl/uQ8Uvmn6j5sa3QeP24k4EV/YLyJUHNOVXPY/crE5bY7IZ6n3DZa1BFdWE5Hb3jQVSS1X7UwqR2imT+ie9LwDfW+Egj/epG6H6Qhv0blVIVDozP1Cgc7Nhf51Jz8V+VeLpDHEX7yoi6DzJqf8QgA0m/QUg3M1E1lBHEayydnW9EFqZ3aXxmaGi1Qi6m3QsIBc2WB/WtjwSaPbCyHIeu20EwJ2DaBEOz+TXYZFgD1FIDsqWQU5VSb3S41KWirTvKqN865nu9zv2r0ajMSFqLHr9acKLMl8cDkCI14UXN1l2DpNGeWNl0bE=
