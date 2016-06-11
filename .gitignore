@@ -1,0 +1,14 @@
+# Hugo output directory
+public/*
+!public/.gitkeep
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Windows stuff
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

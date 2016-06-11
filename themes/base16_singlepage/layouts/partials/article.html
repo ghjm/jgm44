@@ -1,0 +1,26 @@
+{{ $baseurl := .Site.BaseURL }}{{ $dateMissing := eq .Date.Year 1}}
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta">
+{{ with .Params.categories }}
+    <span class="key">{{ if eq $dateMissing true }}published {{ end }}in</span>
+    <span class="val">
+{{ range . }}
+        <a href="{{ $baseurl }}categories/{{ . | urlize }}">{{ . }}</a>
+{{ end }}
+    </span>
+{{ end }}
+{{ with .Params.tags }}
+    <br>
+    <span class="key">tags:</span>
+    <span class="val">
+{{ range . }}
+        <a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a>
+{{ end }}
+    </span>
+{{ end }}
+  </div>
+  <h1 class="headline" itemprop="headline">{{ .Title }}</h1>
+  <section class="body" itemprop="articleBody">
+    {{ .Content }}
+  </section>
+</article>

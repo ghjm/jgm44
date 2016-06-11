@@ -1,0 +1,19 @@
+{{ $baseurl := .Site.BaseURL }}
+<main role="main" class="homepage">
+
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <h1 class="headline" itemprop="headline">
+  {{ range .Data.Pages }}
+	{{if eq .RelPermalink "/index.html" }} {{ .Title }} {{ end }}
+  {{ end }}
+  </h1>
+  <section class="body" itemprop="articleBody">
+	{{ range .Data.Pages }}
+        {{ if eq .RelPermalink "/index.html" }} {{.Content}} {{ end }}
+	{{ end }}
+  </section>
+
+</article>
+
+</main>

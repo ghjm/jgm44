@@ -1,0 +1,4 @@
+baseurl = "http://jgm44.com/"
+languageCode = "en-us"
+title = "JGM-44"
+theme = "base16_singlepage"
