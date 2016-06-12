@@ -353,15 +353,11 @@ article.single p code {
 }
 
 article.single figure {
-  box-sizing: border-box;
+  display: inline-block;
   max-width: 832px;
   max-width: 52rem;
-  width: 832px;
-  width: 52rem;
-  margin-left: -128px;
-  margin-left: -8rem;
-  margin-right: -128px;
-  margin-right: -8rem;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 16px;
   margin-bottom: 1rem;
   padding: 1em;
@@ -370,7 +366,8 @@ article.single figure {
 
 @media (max-width: 52em) {
   article.single figure {
-    width: 100%;
+    display: inline-block;
+    max-width: 100%;
     margin-left: 0;
     margin-right: 0;
     border-radius: 3px;
@@ -379,7 +376,6 @@ article.single figure {
 
 article.single figure img {
   max-width: 100%;
-  width: 100%;
   border-radius: 3px;
 }
 

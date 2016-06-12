@@ -5,14 +5,13 @@ url = "index.html"
 title = "The JGM-44 Microcomputer"
 +++
 
-**JGM-44 in its Ultimate Configuration**
-{{< figure src="/jgm44-annotated.png" title="JGM-44 Microcomputer" >}}
-
 The JGM-44 was a one-of-a-kind computer, hand-built by my father during the
 "hobbyist" era from about 1978 to 1986. It would eventually feature switchable
 (non-simultaneous) operation of either a Motorola MC6809 or a Zilog Z-80 CPU,
 dual 8" 241KB floppy drives, 64K of RAM, and a sound card capable (by 80s
 standards) of both music and speech.
+
+{{< figure src="/jgm44-annotated.png" title="JGM-44 Microcomputer" >}}
 
 (The term 'JGM-44' properly refers to the bus architecture, not the computer
 itself.  But since this is the only computer in the world that ever used this
