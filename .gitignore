@@ -2,6 +2,10 @@
 public/*
 !public/.gitkeep
 
+# Editor stuff
+*.swp
+*~
+
 # Python compiled files
 __pycache__/
 *.py[cod]
